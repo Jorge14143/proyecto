@@ -13,11 +13,6 @@ function h(v) {
     "'": "&#039;"
   }[c]));
 }
-
-function escapeHtml(value) {
-  return h(value);
-}
-
 function money(v) {
   if (v === null || v === "" || v === undefined) {
     return "Sin precio";
@@ -2167,9 +2162,8 @@ async function loadQuoteRequests() {
 
     // Ocultar loader
     if (loading) {
-    }
-
     loading.style.display = "none";
+	 }
     // Limpiar solamente la lista
     container.innerHTML = "";
 
@@ -3437,12 +3431,6 @@ if (typeof load === "function") {
 // =========================================================
 // AUTENTICACIÓN / SESIÓN
 // =========================================================
-
-if (typeof load === "function") {
-  // El panel ya se carga arriba.
-}
-
-
 // =========================================================
 // CARGAR SOLICITUDES AL INICIAR
 // =========================================================
@@ -4369,6 +4357,3 @@ setupNotifications();
 loadNotifications();
 setupJobs();
 setupJobsHistory();
-loadQuoteRequests();
-setupNotifications();
-loadNotifications();
